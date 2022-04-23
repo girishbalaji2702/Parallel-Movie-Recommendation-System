@@ -16,3 +16,11 @@ From the above discussion we can see that the existing system is not really accu
 has many disadvantages. On top of these it is slow compared to the ALS approach. Thus, in 
 order to parallelize the KNN based approach we introduce another method using ALS based 
 on which the system will be parallelized. 
+
+To run the knn.py  :-
+ex. python src/knn.py --movie_name "Iron Man" --top_n 10
+
+Torun als.py  :-
+ex. spark-submit --master local[4] --driver-memory 4g 
+             --executor-memory 8g src/als.py 
+             --movie_name "Iron Man" --top_n 10
